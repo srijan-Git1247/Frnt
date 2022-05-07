@@ -46,7 +46,13 @@ export default function Eligibility() {
        
         <div className={styles.honeycombcell_title} datahover="Under medication not allowed"><p><GiMedicines size={32}/></p></div>
     </li>
-  
+    
+    <li className={styles.honeycombcell} >
+       
+        <div className={styles.honeycombcell_title} datahover="Immunized and Vaccinated people should not be prohibited"><p><GiSyringe size={32}/></p></div>
+    </li>
+    
+    
    
     <li className={styles["honeycombcell"]+""+styles["honeycomb_Hidden"]}>
 
