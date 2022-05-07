@@ -22,15 +22,7 @@ export default function Header() {
           </a>
         </Link>
       </div>
-      <div className={styles.help}>
-        <div className={styles.callButton}>
-          <Image src="/images/telephone.png" alt="" width="32" height="25" />
-        </div>
-        <div className={styles.texts}>
-          <div className={styles.text}>HelpLine</div>
-          <div className={styles.text}>0092-84985-95094</div>
-        </div>
-      </div>
+      
       <nav>
         <ul
           className={
