@@ -3,16 +3,22 @@ import styles from "../styles/Header.module.css";
 import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
+import { useState } from "react";
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const openMenu = () => setIsOpen(!isOpen);
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-        
           <a>
-            <Image src="/images/heart-attack.png" alt="" width="32" height="32" />Sikkim Blood
-
-         
+            <Image
+              src="/images/heart-attack.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Sikkim
           </a>
         </Link>
       </div>
@@ -26,51 +32,139 @@ export default function Header() {
         </div>
       </div>
       <nav>
-        <ul>
+        <ul
+          className={
+            isOpen === false
+              ? styles.navmenu
+              : styles.navmenu + " " + styles.active
+          }
+        >
+          <li>
+            <Link href="/about">
+              <a
+                className={
+                  isOpen === false
+                    ? styles.navlink
+                    : styles.navlink + " " + styles.active
+                }
+                onClick={openMenu}
+              >
+                About
+              </a>
+            </Link>
+          </li>
           <li>
             <Link href="/requests">
-              <a>Active Requirements</a>
+              <a
+                className={
+                  isOpen === false
+                    ? styles.navlink
+                    : styles.navlink + " " + styles.active
+                }
+                onClick={openMenu}
+              >
+                Active Requirements
+              </a>
             </Link>
           </li>
           <li>
             <Link href="/camps">
-              <a>Blood Donation Camps</a>
+              <a
+                className={
+                  isOpen === false
+                    ? styles.navlink
+                    : styles.navlink + " " + styles.active
+                }
+                onClick={openMenu}
+              >
+                Blood Donation Camps
+              </a>
             </Link>
           </li>
           <li>
             <Link href="/requests/add">
-              <a>Put a Request</a>
-            </Link>
-          </li>
-          <li>
-          
-            <Link href="/account/profile">
-              <a>
-              < FaUserCircle className={styles.ico}/>
+              <a
+                className={
+                  isOpen === false
+                    ? styles.navlink
+                    : styles.navlink + " " + styles.active
+                }
+                onClick={openMenu}
+              >
+                Put a Request
               </a>
-            
-             
-            
             </Link>
           </li>
           <li>
-            <button
-              onClick={() => logout()}
-              className="btn-secondary btn-icon"
-              id="main"
-            >
-              <FaSignOutAlt></FaSignOutAlt>Sign Out
-            </button>
+            <Link href="/account/profile">
+              <a
+                className={
+                  isOpen === false
+                    ? styles.navlink
+                    : styles.navlink + " " + styles.active
+                }
+                onClick={openMenu}
+              >
+                <FaUserCircle className={styles.ico} />
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/requests/add">
+              <button
+                className={
+                  isOpen === false
+                    ? "btn-secondary" + " " + "btn-icon"
+                    : styles.navlink +
+                      " " +
+                      styles.active +
+                      " " +
+                      "btn-secondary " +
+                      " " +
+                      "btn-icon"
+                }
+                onClick={openMenu}
+                id="main"
+              >
+                <FaSignOutAlt></FaSignOutAlt>Sign Out
+              </button>
+            </Link>
           </li>
           <li>
             <Link href="/account/login">
-              <a className="btn-secondary btn-icon" id="main">
+              <button
+                className={
+                  isOpen === false
+                    ? "btn-secondary" + " " + "btn-icon"
+                    : styles.navlink +
+                      " " +
+                      styles.active +
+                      " " +
+                      "btn-secondary " +
+                      " " +
+                      "btn-icon"
+                }
+                onClick={openMenu}
+                id="main"
+              >
                 <FaSignInAlt />
                 Sign In
-              </a>
+              </button>
             </Link>
           </li>
         </ul>
+        <button
+          className={
+            isOpen === false
+              ? styles.hamburger
+              : styles.hamburger + " " + styles.active
+          }
+          onClick={openMenu}
+        >
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </button>
       </nav>
     </header>
   );
