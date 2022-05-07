@@ -37,7 +37,7 @@ export default function RegisterPage() {
       <div className={styles.auth}>
         <h1>
           <RiUserHeartFill />
-          &nbsp;Registration
+          &nbsp;Sign-Up
         </h1>
         <ToastContainer />
         <form >

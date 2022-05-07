@@ -3,7 +3,9 @@
 {
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 50px;
+    border-color: #111111;
+    
 }
 .honeycomb
 {
@@ -57,12 +59,16 @@
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
-  font-size: 1.75em;
+  font-size: 1.0em;
   transition: opacity 350ms;
+}
+.honeycombcell_title:hover::after
+{
+  content: attr(datahover);
 }
 .honeycombcell_title > small
 {
-  font-weight: 300;
+  font-weight: 200;
   margin-top: 0.25em;
 }
 .honeycombcell::before,
@@ -70,6 +76,8 @@
 {
  content: "";
 }
+
+
 .honeycombcell::before,
 .honeycombcell::after,
 .honeycombcell_img
@@ -97,23 +105,25 @@
   -webkit-transition: opacity 350ms;
   
 }
+
 .honeycombcell:hover
-.honeycombcell_title
+.honeycombcell_img
 {
   opacity: 0;
-}
-.honeycomb-cell:hover
-.honeycomb-cell_img
-{
   filter: grayscale(0%);
+  content: attr(datahover);
 }
 .honeycombcell:hover::before
 {
   background: #fc5130;
 }
+
 .honeycombcell:hover::after
 {
   opacity: 0;
+  
+
+  
 }
 .honeycomb_Hidden
 {

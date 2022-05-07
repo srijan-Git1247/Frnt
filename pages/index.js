@@ -1,7 +1,6 @@
 import Layout from "../components/Layout"
 import Link from "next/link"
-import Image from "next/image"
-import styles from "../styles/honeycomb.module.css"
+import Eligibility from "../components/Eligibility";
 export default function HomePage({events}) {
   return (
     <Layout>
@@ -14,73 +13,9 @@ export default function HomePage({events}) {
         </Link>
     
       </div>
-      <div className={styles.outer}>
-    <ul className={styles.honeycomb}>
-    <li className={styles.honeycombcell } datahover="One should be between the age of 18 and 65 in order to donate blood">
-       
-        <div className={styles.honeycombcell_title}>18+</div>
-    </li>
-   <li className={styles.honeycombcell}  datahover="">
-       
-        <div className={styles.honeycombcell_title}>Web Design</div>
-    </li>
-    <li className={styles.honeycombcell}  datahover="">
-       
-        <div className={styles.honeycombcell_title}>Web Design</div>
-    </li>
-    <li className={styles.honeycombcell}  datahover="">
-       
-        <div className={styles.honeycombcell_title}>Web Design</div>
-    </li>
-    <li className={styles.honeycombcell}  datahover="">
-       
-        <div className={styles.honeycombcell_title}>Web Design</div>
-    </li>
-    <li className={styles.honeycombcell}  datahover="">
-       
-        <div className={styles.honeycombcell_title}>Web Design</div>
-    </li>
-    <li className={styles.honeycombcell} datahover="">
-       
-        <div className={styles.honeycombcell_title}>Web Design</div>
-    </li>
-    <li className={styles.honeycombcell}  datahover="">
-       
-        <div className={styles.honeycombcell_title}>Web Design</div>
-    </li>
-    
-    <li className={styles.honeycombcell}  datahover="">
-       
-        <div className={styles.honeycombcell_title}>Web Design</div>
-    </li>
-   
-    <li className={styles["honeycombcell"]+""+styles["honeycomb_Hidden"]}>
-
-
-    </li>
-    <li>
       
-    </li>
-
-</ul>
-<div>
-
-  <br></br>
-  <br></br>
-  <br></br>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
+      
+      <Eligibility/>
 
     </Layout>
   )

@@ -8,12 +8,17 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          <a>Sikkim Blood</a>
+        
+          <a>
+            <Image src="/images/heart-attack.png" alt="" width="32" height="32" />Sikkim Blood
+
+         
+          </a>
         </Link>
       </div>
       <div className={styles.help}>
         <div className={styles.callButton}>
-          <Image src="/images/telephone.png" alt="" width="32" height="32" />
+          <Image src="/images/telephone.png" alt="" width="32" height="25" />
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>HelpLine</div>
@@ -38,10 +43,14 @@ export default function Header() {
             </Link>
           </li>
           <li>
-         
+          
             <Link href="/account/profile">
+              <a>
+              < FaUserCircle className={styles.ico}/>
+              </a>
+            
              
-            <FaUserCircle className={styles.ico}/>
+            
             </Link>
           </li>
           <li>

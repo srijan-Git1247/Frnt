@@ -6,8 +6,9 @@ export default function Header() {
   const [index, setIndex] = useState(0);
   const images = [
     "/images/Featured4.jpg",
-    "/images/Featured2.png",
+    "/images/Eligibilty/BDChart.jpg",
     "/images/Featured1.jpg",
+   
     
   ];
 

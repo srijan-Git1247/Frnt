@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import styles from "../../styles/AuthForm.module.css";
+import Image from "next/image";
 //import AuthContext from "../../context/AuthContext";
 export default function LoginPage() {
     /*
@@ -58,6 +59,7 @@ export default function LoginPage() {
           </div>
           <input type="submit" value="Login" className="btn"></input>
         </form>
+        <p><button className={styles.sign}><Image classname={styles.img} src="/images/Google/google.jpg" width="20" height="20"alt=""/>Sign In With Google</button></p>
         <p>
           New User?
           <Link href="/account/register"> Create an Account</Link>
